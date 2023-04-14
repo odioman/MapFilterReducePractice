@@ -54,3 +54,67 @@ function square(arr) {
   
   //console.log(initialize(input))
   
+  /* const input = [
+    {
+      name: "John",
+      age: 13,
+    },
+    {
+      name: "Mark",
+      age: 56,
+    },
+    {
+      name: "Rachel",
+      age: 45,
+    },
+    {
+      name: "Nate",
+      age: 67,
+    },
+    {
+      name: "Jennifer",
+      age: 65,
+    },
+  ]; */
+  
+  //result [13, 67, 54];
+  
+  function oldYoungDif(arr) {
+    const resultArr = [];
+    const young = Math.min(...arr.map(n => n.age))
+    const old = Math.max(...arr.map(n => n.age))
+    const diff = old - young
+    resultArr.push(young, old, diff)
+    return resultArr
+  }
+  
+  //console.log(oldYoungDif(input))
+  
+  //const input = "Every developer likes to mix kubernetes and javascript";
+  // result "E3y d7r l3s to mix k8s and j8t";
+  function numeronym(str) {
+   return str[0] + (str.length-2) + str[str.length-1]
+  }
+  
+  function createNumeronym(str) {
+    const wordsWithNumber = str
+      .split(' ')
+      .map((word) => word.length >= 4 ? numeronym(word) : word)
+      .join(' ')
+    return wordsWithNumber
+  }
+  
+  //console.log(createNumeronym(input));
+  
+  const input = 6;
+  //result 720
+  
+  function factorial(n) {
+    const start = [n];
+    console.log(start)
+    const fillStart = start.fill(null, 0, n)
+    console.log(fillStart)
+  }
+  
+  console.log(factorial(input))
+  
